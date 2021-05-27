@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
