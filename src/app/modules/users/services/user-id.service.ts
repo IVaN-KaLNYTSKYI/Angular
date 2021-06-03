@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
@@ -10,9 +10,11 @@ import {User} from "../models/user";
 export class UserIdService {
 
   private url = 'https://jsonplaceholder.typicode.com/users/';
-  constructor(private httpClient: HttpClient) { }
 
-  getUsersId(id:number): Observable<User> {
-    return this.httpClient.get<User>(this.url+id);
+  constructor(private httpClient: HttpClient) {
+  }
+
+  getUsersId(id: number): Observable<User> {
+    return this.httpClient.get<User>(this.url + id);
   }
 }

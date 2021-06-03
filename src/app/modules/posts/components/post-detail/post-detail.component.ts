@@ -11,10 +11,10 @@ import {ActivatedRoute} from "@angular/router";
 export class PostDetailComponent implements OnInit {
   post: Post
 
-  constructor(private postIdService: PostIdService,private activatedRoute:ActivatedRoute) {
-    this.activatedRoute.params.subscribe(params=>{
+  constructor(private postIdService: PostIdService, private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.params.subscribe(params => {
       this.postIdService.getPostId(params.id).subscribe(value => {
-        this.post=value
+        this.post = value
       })
     })
   }
