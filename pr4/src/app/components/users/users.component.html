@@ -1,0 +1,6 @@
+<app-header></app-header>
+<app-user *ngFor=" let user of users"
+          [user]="user"
+          (userDetail)="userDetail($event)">
+</app-user>
+<app-user-detail [user]="user"></app-user-detail>
