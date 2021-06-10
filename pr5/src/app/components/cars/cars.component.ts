@@ -34,7 +34,10 @@ export class CarsComponent implements OnInit {
 
   add():void{
     console.log(this.myFormGroup.value)
-    this.carService.postCar(this.myFormGroup.value).subscribe(value => console.log(value))
+    this.carService.postCar(this.myFormGroup.value).subscribe(value => {
+      console.log(value)
+      this.carService.getCar().subscribe(value1 => this.cars=value1)
+    })
 
   }
 }
